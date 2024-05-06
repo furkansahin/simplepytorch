@@ -29,6 +29,10 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
+      - name: Create /workspace/data directory
+        run: |
+          mkdir -p ~/workspace/data
+
       # Runs a set of commands using the runners shell
       - name: Run benchmark
         run: |
